@@ -14,5 +14,5 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/', 'HomeController@index')->name('/');
+Route::get('/procedimiento/{val}', 'HomeController@procedimiento')->name('procedimiento');

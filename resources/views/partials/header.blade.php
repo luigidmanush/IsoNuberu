@@ -9,17 +9,17 @@
                     <b>
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img src="/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <img src="/assets/images/" alt="" class="dark-logo" />
                         <!-- Light Logo icon -->
-                        <img src="/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        <img src="/assets/images/" alt="" class="light-logo" />
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span>
                      <!-- dark Logo text -->
-                     <img src="/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                     <img src="/assets/images/logo-text.png" alt="homepage" class="dark-logo" width="100%" />
                      <!-- Light Logo text -->    
-                     <img src="/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                     <img src="/assets/images/logo-light-text.png" class="light-logo" alt="homepage" width="100%" /></span> </a>
             </div>
             <!-- ============================================================== -->
             <!-- End Logo -->
@@ -97,7 +97,7 @@
                                     <div class="message-center">
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"> <img src="/assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                            <div class="user-img"> <img src="/assets/images/users/{{ Auth::user()->avatar }}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                             <div class="mail-contnet">
                                                 <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span> </div>
                                         </a>
@@ -236,12 +236,12 @@
                             <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a> </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/images/users/{{ Auth::user()->avatar }}" alt="user" class="profile-pic" /></a>
                         <div class="dropdown-menu dropdown-menu-right animated flipInY">
                             <ul class="dropdown-user">
                                 <li>
                                     <div class="dw-user-box">
-                                        <div class="u-img"><img src="/assets/images/users/1.jpg" alt="user"></div>
+                                        <div class="u-img"><img src="/assets/images/users/{{ Auth::user()->avatar }}" alt="user"></div>
                                         <div class="u-text">
                                             <h4>{{ Auth::user()->name }}</h4><br/>
                                             <p class="text-muted">{{ Auth::user()->email }}</p>
@@ -250,13 +250,13 @@
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#"><i class="ti-user"></i> Mi perfil</a></li>
-                                <li><a href="#"><i class="ti-wallet"></i> Mi Procedimiento</a></li>
+                                <li><a href="/procedimiento/{{ $val=0 }}"><i class="ti-wallet"></i> Mi Procedimiento</a></li>
                                 <li><a href="#"><i class="ti-email"></i> Mi mensajes</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#"><i class="ti-settings"></i> Configuración</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout                                             
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Cerrar Sesión                                             
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf

@@ -14,7 +14,7 @@
                     <form class="form-horizontal form-material" id="loginform" action="{{ route('login') }}" method="POST">
                     @csrf
 
-                    <a href="javascript:void(0)" class="text-center db"><img src="/assets/images/logo-icon.png" alt="Home" /><br/><img src="/assets/images/logo-text.png" alt="Home" /></a>  
+                    <a href="javascript:void(0)" class="text-center db"><img src="/assets/images/logo-icon.png" width="35%" alt="Home" /><br/><br/><img src="/assets/images/logo-text.png" width="85%" alt="Home" /></a>  
                     
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
@@ -50,7 +50,7 @@
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
                                 <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
+                                        {{ __('Iniciar Sesión') }}
                                     </button>
     
                                 

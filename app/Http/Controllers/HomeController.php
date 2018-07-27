@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use App\tbl_procedimientos;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with(['User'=>tbl_procedimientos::where('id', Auth::user()->unidad_id)->first(),]);
+    }
+
+      
+    public function procedimiento($val)
+    {
+        return view('cptavisor.viewPdf')->with(['User'=>tbl_procedimientos::where('id', Auth::user()->unidad_id)->first(),'val'=>$val,]);
     }
 }
