@@ -29,8 +29,9 @@ class HomeController extends Controller
     }
 
       
-    public function procedimiento($val)
+    public function procedimiento()
     {
-        return view('cptavisor.viewPdf')->with(['User'=>tbl_procedimientos::where('id', Auth::user()->unidad_id)->first(),'val'=>$val,]);
+        return view('cptavisor.viewPdf')->with(['User'=>tbl_procedimientos::where('id', Auth::user()->unidad_id)->first(),]);
     }
+
 }
