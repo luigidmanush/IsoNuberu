@@ -17,3 +17,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('/');
 Route::get('/procedimiento', 'HomeController@procedimiento')->name('procedimiento');
 Route::get('/documentos/{id}', 'HomeController@documentos')->name('documentos');
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+//EMPLEADOS
+Route::get('/Empleados', 'EmpleadosController@index')->name('index');
+
+
+
