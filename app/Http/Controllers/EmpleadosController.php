@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\tbl_empleados;
+use App\tbl_empdatlabs;
 
 class EmpleadosController extends Controller
 {
@@ -16,8 +17,7 @@ class EmpleadosController extends Controller
     {
         //LLENAR LA TABLA DE EMPLEADOS - INICIAL
          
-
-        return view('cptaRecHum.viewListEmpleados')->with([
+            return view('cptaRecHum.viewListEmpleados')->with([
             'Empleados'=>tbl_empleados::get(),
         ]);
             
