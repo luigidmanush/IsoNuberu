@@ -44,6 +44,7 @@
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="/Empleados">Lista de Empledos</a></li>
                     <li><a href="#">Productividad</a></li>
+                    <li><a href="#">Nómina</a></li>
                 </ul>
             </li>
         @endif

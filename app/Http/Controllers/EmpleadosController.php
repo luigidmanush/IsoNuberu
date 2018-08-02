@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\tbl_empleados;
 use App\tbl_empdatlabs;
 
+
+
 class EmpleadosController extends Controller
 {
     /**
@@ -16,9 +18,8 @@ class EmpleadosController extends Controller
     public function index()
     {
         //LLENAR LA TABLA DE EMPLEADOS - INICIAL
-         
-            return view('cptaRecHum.viewListEmpleados')->with([
-            'Empleados'=>tbl_empleados::get(),
+           return view('cptaRecHum.viewListEmpleados')->with([
+            'Empleados'=>tbl_empleados::with('Laboral','Laboral.Puesto')->get(),
         ]);
             
 
@@ -51,9 +52,9 @@ class EmpleadosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($NoEmpleado)
     {
-        //
+        return view('cptaRecHum.viewEmpDetalle');
     }
 
     /**

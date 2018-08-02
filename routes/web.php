@@ -22,6 +22,7 @@ Route::get('/documentos/{id}', 'HomeController@documentos')->name('documentos');
 //////////////////////////////////////////////////////////////////////////////////////
 //EMPLEADOS
 Route::get('/Empleados', 'EmpleadosController@index')->name('index');
+Route::get('/EmpDetalle/{NoEmpleado}', 'EmpleadosController@show')->name('show');
 
 
 

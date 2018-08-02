@@ -16,9 +16,9 @@
         <!-- Bootstrap Core CSS -->
         <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
         <!-- You can change the theme colors from here -->
-        <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+        <link href="/css/colors/blue-dark.css" id="theme" rel="stylesheet">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -83,15 +83,7 @@
                     <!-- ============================================================== -->
                     <!-- Start Page Content -->
                     <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-block">
-                                    @yield('Content')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @yield('Content')
                     <!-- ============================================================== -->
                     <!-- End PAge Content -->
                     <!-- ============================================================== -->
@@ -130,15 +122,15 @@
         <script src="/assets/plugins/bootstrap/js/tether.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <!-- slimscrollbar scrollbar JavaScript -->
-        <script src="js/jquery.slimscroll.js"></script>
+        <script src="/js/jquery.slimscroll.js"></script>
         <!--Wave Effects -->
-        <script src="js/waves.js"></script>
+        <script src="/js/waves.js"></script>
         <!--Menu sidebar -->
-        <script src="js/sidebarmenu.js"></script>
+        <script src="/js/sidebarmenu.js"></script>
         <!--stickey kit -->
         <script src="/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
         <!--Custom JavaScript -->
-        <script src="js/custom.min.js"></script>
+        <script src="/js/custom.min.js"></script>
         <!-- ============================================================== -->
         <!-- Style switcher -->
         <!-- ============================================================== -->
